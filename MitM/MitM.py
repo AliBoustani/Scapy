@@ -51,8 +51,9 @@ try:
             print Fore.BLUE + Style.BRIGHT + "\n### Exiting . . . . . "
             print(Style.RESET_ALL)
             sys.exit(1)
-    
-    interface = raw_input(Fore.BLUE + Style.BRIGHT + "\n### Please Specify Your Network Interface, like (eth0):  ")
+    #Extracting The interface name with "conf" function of Scapy!
+    intface = conf.iface
+    interface = raw_input(Fore.BLUE + Style.BRIGHT + "\n### Please Specify Your Network Interface, like ' %s ' :  " %intface)
     victimIP = raw_input(Fore.BLUE + Style.BRIGHT + "\n### Enter Victim IP:  ")
     gatewayIP = raw_input(Fore.BLUE + Style.BRIGHT + "\n### Enter Gateway IP:  ")
     
